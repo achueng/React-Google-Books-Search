@@ -17,14 +17,14 @@ function SearchResults(props) {
                     ) : 
                     (data.map(entry => {
                         return (
-                            <ListGroup.Item action variant="light">
-                                Title: {entry.title}
-                                Author: {entry.author}
-                                Description: {entry.description}
-                                <Image thumbnail 
+                            <ListGroup.Item action variant="light" key={data.indexOf(entry)}>
+                                <p>Title: {entry.title}</p>
+                                <p>Author: {entry.authors}</p>
+                                <p>Description: {entry.description}</p>
+                                {/* <Image thumbnail 
                                 src={entry.image}
                                 alt={entry.title}
-                                />
+                                /> */}
                                 <a href={entry.link}>Learn More</a>
                             </ListGroup.Item>
                         )
