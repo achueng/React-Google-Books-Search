@@ -25,7 +25,7 @@ function SearchResults(props) {
                                 src={entry.image}
                                 alt={entry.title}
                                 /> */}
-                                <a href={entry.link}>Learn More</a>
+                                <a href={entry.link} target="_blank">Learn More</a>
                             </ListGroup.Item>
                         )
                     }))}
