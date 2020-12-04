@@ -6,7 +6,7 @@ function BookSearch(props) {
         <Container fluid className="px-4">
             <Jumbotron>
                 <h3 className="px-4">Book Search</h3>
-                <Form className="px-4">
+                <Form className="px-4" onSubmit={props.handleSubmit}>
                     <Form.Group controlId="formSearchBook">
                         <Form.Label>Book</Form.Label>
                         <Row>
@@ -20,7 +20,6 @@ function BookSearch(props) {
                                 <Button 
                                 variant="primary"
                                 type="submit"
-                                onSubmit={props.handleSubmit}
                                 >
                                     Search
                             </Button>
