@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Jumbotron, ListGroup, Button, Row, Col } from "react-bootstrap";
+import { Container, Jumbotron, ListGroup } from "react-bootstrap";
 
 function SearchResults() {
     return (
