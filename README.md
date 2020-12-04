@@ -4,7 +4,7 @@
 
 This is a Google Books Search application created with React.
 
-![React Google Books Search Preview]()
+![React Google Books Search Preview](./client/public/assets/react-google-books-search.gif)
 
 ## Table of Contents
   1. [Installation](#Installation)
