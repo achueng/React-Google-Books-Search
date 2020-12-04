@@ -13,7 +13,7 @@ const books = {
     res.json(booksDb.remove);
   },
   searchBook: function (req, res) {
-    let bookTitle = req.body.title.toLowerCase().replace(/\s/g, "+");
+    let bookTitle = req.body.title.replace(/\s/g, "+");
     axios.get(
       'https://www.googleapis.com/books/v1/volumes?q='
       + bookTitle
@@ -25,11 +25,10 @@ const books = {
           title: entry.volumeInfo.title,
           authors: entry.volumeInfo.authors,
           description: entry.volumeInfo.description,
-          image: entry.volumeInfo.imageLinks.thumbnail,
+          // image: entry.volumeInfo.imageLinks.thumbnail,
           link: entry.volumeInfo.previewLink
         }
       });
-      console.log(bookEntries);
       res.json(bookEntries);
     }).catch(err => console.log(err))
   }
