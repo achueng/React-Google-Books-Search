@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Jumbotron, Form, Button, Row, Col } from "react-bootstrap";
 
-function BookSearch() {
+function BookSearch(props) {
     return (
         <Container fluid className="px-4">
             <Jumbotron>
@@ -11,10 +11,17 @@ function BookSearch() {
                         <Form.Label>Book</Form.Label>
                         <Row>
                             <Col sm={10}>
-                                <Form.Control type="text" placeholder="Enter a book title" />
+                                <Form.Control type="text" placeholder="Enter a book title" 
+                                name="title"
+                                onChange={props.handleChange}
+                                />
                             </Col>
                             <Col sm={1}>
-                                <Button variant="primary" type="submit">
+                                <Button 
+                                variant="primary"
+                                type="submit"
+                                onSubmit={props.handleSubmit}
+                                >
                                     Search
                             </Button>
                             </Col>
