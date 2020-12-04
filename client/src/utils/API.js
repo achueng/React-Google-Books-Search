@@ -6,8 +6,8 @@ const API = {
         return axios.get("/api/books");
     },
     // search for book from user input
-    searchBooks: (inputTitle) => {
-        return axios.post("/api/books/search", {title: inputTitle});
+    searchBook: (inputTitle) => {
+        return axios.post("/api/books/search", inputTitle);
     },
     // save the book entry to database
     saveBook: (bookData) => {
