@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Jumbotron } from "react-bootstrap";
 import NavBar from "./NavBar";
-import BookSearch from "./BookSearch";
 
-function Layout() {
+function Layout(props) {
     return (
         <React.Fragment>
             <NavBar />
@@ -13,7 +12,7 @@ function Layout() {
                     <h2 className="text-center">Search for and Save Books of Interest</h2>
                 </Jumbotron>
             </Container>
-            <BookSearch/>
+            {props.children}
         </React.Fragment>
     )
 }
