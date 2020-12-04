@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Jumbotron, ListGroup } from "react-bootstrap";
+import { Container, Jumbotron, ListGroup, Image } from "react-bootstrap";
 
 function SearchResults(props) {
     const data = props.searchedBooks;
@@ -21,6 +21,11 @@ function SearchResults(props) {
                                 Title: {entry.title}
                                 Author: {entry.author}
                                 Description: {entry.description}
+                                <Image thumbnail 
+                                src={entry.image}
+                                alt={entry.title}
+                                />
+                                <a href={entry.link}>Learn More</a>
                             </ListGroup.Item>
                         )
                     }))}
